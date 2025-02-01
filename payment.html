@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - EthioWhere</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Payment Methods</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Choose Your Payment Method</h2>
+            
+            <h3>1. Telebirr</h3>
+            <p>Send payment to <b>Telebirr Number: +251-XXXX-XXXX</b></p>
+            <p>Upload your payment receipt:</p>
+            <input type="file" id="telebirrReceipt">
+            <button onclick="confirmPayment('Telebirr')">Confirm Payment</button>
+
+            <h3>2. CBE Birr</h3>
+            <p>Send payment to <b>CBE Birr Number: +251-YYYY-YYYY</b></p>
+            <p>Upload your payment receipt:</p>
+            <input type="file" id="cbeBirrReceipt">
+            <button onclick="confirmPayment('CBE Birr')">Confirm Payment</button>
+
+            <h3>3. Offline Bank Transfer</h3>
+            <p>Bank Name: Commercial Bank of Ethiopia</p>
+            <p>Account Number: 1000544233185</p>
+            <p>Upload your bank transfer receipt:</p>
+            <input type="file" id="bankReceipt">
+            <button onclick="confirmPayment('Bank Transfer')">Confirm Payment</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EthioWhere - All rights reserved.</p>
+    </footer>
+
+    <script>
+        function confirmPayment(method) {
+            alert("Thank you for your payment via " + method + "! Our team will verify and contact you.");
+        }
+    </script>
+</body>
+</html>
